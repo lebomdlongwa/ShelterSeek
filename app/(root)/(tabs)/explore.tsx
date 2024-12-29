@@ -5,7 +5,7 @@ import * as styled from "./styles/explore";
 const Explore = () => {
   return (
     <styled.ExploreWrapper>
-      <Text>Explore</Text>
+      <styled.ExploreHeader>Exploring Github Project</styled.ExploreHeader>
     </styled.ExploreWrapper>
   );
 };

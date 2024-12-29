@@ -1,8 +1,17 @@
-export const FontFamily = {
-  rubik: ["Rubik-Regular", "sans-serif"],
-  "rubik-bold": ["Rubik-Bold", "sans-serif"],
-  "rubik-extrabold": ["Rubik-ExtraBold", "sans-serif"],
-  "rubik-medium": ["Rubik-Medium", "sans-serif"],
-  "rubik-semibold": ["Rubik-SemiBold", "sans-serif"],
-  "rubik-light": ["Rubik-Light", "sans-serif"],
+type Fonts = {
+  rubikBold: "Rubik-Bold";
+  rubikExtraBold: "Rubik-ExtraBold";
+  rubikLight: "Rubik-Light";
+  rubikMedium: "Rubik-Medium";
+  rubikRegular: "Rubik-Regular";
+  rubikSemiBold: "Rubik-SemiBold";
+};
+
+export const Fonts: Fonts = {
+  rubikBold: "Rubik-Bold",
+  rubikExtraBold: "Rubik-ExtraBold",
+  rubikLight: "Rubik-Light",
+  rubikMedium: "Rubik-Medium",
+  rubikRegular: "Rubik-Regular",
+  rubikSemiBold: "Rubik-SemiBold",
 };
