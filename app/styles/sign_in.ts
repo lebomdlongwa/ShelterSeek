@@ -27,6 +27,7 @@ export const SignInBanner = styled.Image`
 `;
 
 export const FormWrapper = styled.View`
+  margin-top: -90px;
   flex: 1;
   width: 100%;
   padding: 0 10px;
@@ -60,7 +61,7 @@ export const IdealHomeText = styled(LetsGetYouText)`
 
 export const GoogleLogin = styled.Text`
   width: 90%;
-  margin-top: 10px;
+  margin-top: 30px;
   font-size: 15px;
   color: ${Colors.grayWhite};
   text-align: center;
@@ -78,7 +79,7 @@ export const LoginButton = styled.TouchableOpacity`
   background-color: white;
   border-radius: 5px;
   border: 1px solid #f5f5f5;
-  margin-top: 10px;
+  margin-top: 30px;
   padding: 10px 0;
   width: 90%;
   display: flex;
