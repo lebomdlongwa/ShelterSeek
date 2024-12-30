@@ -1,4 +1,4 @@
-import { View, Text, ImageSourcePropType } from "react-native";
+import { View, Text, ImageSourcePropType, StyleSheet } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
 import { Colors } from "@/app/components/colors";
@@ -7,32 +7,39 @@ import icons from "@/app/components/icons";
 
 type TabOptionProps = {
   icon: ImageSourcePropType;
-  focused: boolean;
+  active: boolean;
   label: string;
 };
 
-const TabsOption = ({ icon, focused, label }: TabOptionProps) => (
-  <styled.TabsOptionWrapper>
-    <styled.OptionIcon source={icon} />
-    <styled.OptionLabel focused={focused}>{label}</styled.OptionLabel>
-  </styled.TabsOptionWrapper>
-);
+const TabsOption = ({ icon, active, label }: TabOptionProps) => {
+  const iconColor = active ? Colors.blue : Colors.gray;
+
+  return (
+    <styled.TabsOptionWrapper>
+      <styled.OptionIcon style={{ tintColor: iconColor }} source={icon} />
+      <styled.OptionLabel active={active}>{label}</styled.OptionLabel>
+    </styled.TabsOptionWrapper>
+  );
+};
 
 const TabsOptionDefinitions = [
   {
     name: "index",
     icon: icons.home,
     label: "Home",
+    active: true,
   },
   {
     name: "explore",
     icon: icons.search,
     label: "Explore",
+    active: false,
   },
   {
     name: "profile",
     icon: icons.person,
     label: "Profile",
+    active: false,
   },
 ];
 
@@ -46,7 +53,7 @@ const TabsComponent = () => {
           position: "absolute",
           borderTopColor: `${Colors.blueFaded}`,
           borderTopWidth: 1,
-          minHeight: 60,
+          minHeight: 50,
         },
       }}
     >
@@ -59,7 +66,7 @@ const TabsComponent = () => {
             tabBarIcon: () => (
               <TabsOption
                 icon={option.icon}
-                focused={false}
+                active={option.active}
                 label={option.label}
               />
             ),

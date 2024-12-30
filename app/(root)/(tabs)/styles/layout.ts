@@ -16,14 +16,13 @@ export const OptionIcon = styled.Image`
   object-fit: contain;
   width: 20px;
   height: 20px;
-  color: red;
 `;
 
-export const OptionLabel = styled.Text<{ focused: boolean }>`
+export const OptionLabel = styled.Text<{ active: boolean }>`
   font-family: ${Fonts.rubikMedium};
   font-size: 10px;
   width: 100%;
   text-align: center;
   margin-top: 3px;
-  color: ${({ focused }) => (focused ? `${Colors.blue}` : `${Colors.gray}`)};
+  color: ${({ active }) => (active ? `${Colors.blue}` : `${Colors.gray}`)};
 `;
