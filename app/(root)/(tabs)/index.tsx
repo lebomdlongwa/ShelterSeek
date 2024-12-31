@@ -4,11 +4,12 @@ import SearchComponent from "@/app/components/SearchBar";
 import FeaturedComponent from "@/app/containers/Home/Featured";
 import Recommendations from "@/app/containers/Home/Recommendations";
 import * as styled from "./styles";
+import { SafeView, VerticalScroll } from "@/app/styles";
 
 const HomeComponent = () => {
   return (
-    <styled.SafeAreaView>
-      <styled.ScrollView>
+    <SafeView>
+      <VerticalScroll>
         <styled.Header>
           <styled.UserComponent>
             <styled.UserPic source={images.avatar} />
@@ -24,8 +25,8 @@ const HomeComponent = () => {
         </styled.SearchBarWrapper>
         <FeaturedComponent />
         <Recommendations />
-      </styled.ScrollView>
-    </styled.SafeAreaView>
+      </VerticalScroll>
+    </SafeView>
   );
 };
 

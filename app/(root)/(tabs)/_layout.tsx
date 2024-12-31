@@ -59,6 +59,7 @@ const TabsComponent = () => {
     >
       {TabsOptionDefinitions.map((option) => (
         <Tabs.Screen
+          key={option.name}
           name={option.name}
           options={{
             title: `${option.label}`,

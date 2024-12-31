@@ -8,6 +8,7 @@ type Colors = {
   gray: "#666876";
   blackGray: "#191d31";
   red: "#F75555";
+  lightGray: "#F5F5F5";
 };
 
 export const Colors: Colors = {
@@ -20,4 +21,5 @@ export const Colors: Colors = {
   gray: "#666876",
   blackGray: "#191d31",
   red: "#F75555",
+  lightGray: "#F5F5F5",
 };

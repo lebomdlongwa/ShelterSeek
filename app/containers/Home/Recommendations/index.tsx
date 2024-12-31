@@ -1,9 +1,9 @@
 import React from "react";
 import * as styled from "./styles";
 import SlideBarComponent from "@/app/components/SlideBar";
-import { ScrollView } from "react-native";
 import RecomCard from "./RecomCard";
 import { RecommendationsList } from "./definitions";
+import { VerticalScroll } from "@/app/styles";
 
 const Recommendations = () => {
   return (
@@ -13,14 +13,14 @@ const Recommendations = () => {
         <styled.SeeAllLabel>See All</styled.SeeAllLabel>
       </styled.HeaderWrapper>
       <SlideBarComponent />
-      <ScrollView>
+      <VerticalScroll>
         <styled.RecomCardsContainer>
           {RecommendationsList.map((item) => (
-            <RecomCard card={item} />
+            <RecomCard key={item.placeName} card={item} />
           ))}
         </styled.RecomCardsContainer>
         <styled.ExtraSpace />
-      </ScrollView>
+      </VerticalScroll>
     </styled.RecommendationWrapper>
   );
 };

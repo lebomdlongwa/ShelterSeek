@@ -2,6 +2,7 @@ import React from "react";
 import * as styled from "./styles";
 import FeaturedCard from "./FeaturedCard";
 import { featuredList } from "./FeaturedCard/definitions";
+import { HorizontalScroll } from "@/app/styles";
 
 const FeaturedComponent = () => {
   return (
@@ -10,13 +11,13 @@ const FeaturedComponent = () => {
         <styled.HeaderLabel>Featured</styled.HeaderLabel>
         <styled.SeeAllLabel>See All</styled.SeeAllLabel>
       </styled.HeaderWrapper>
-      <styled.ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <HorizontalScroll>
         <styled.CardsWrapper>
           {featuredList.map((card) => (
-            <FeaturedCard card={card} />
+            <FeaturedCard key={card.placeName} card={card} />
           ))}
         </styled.CardsWrapper>
-      </styled.ScrollView>
+      </HorizontalScroll>
     </styled.FeaturedComponentWrapper>
   );
 };

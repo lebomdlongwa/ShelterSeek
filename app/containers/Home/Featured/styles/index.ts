@@ -29,15 +29,11 @@ export const SeeAllLabel = styled.Text`
   color: ${Colors.purple};
 `;
 
-export const ScrollView = styled.ScrollView`
-  width: 100%;
-`;
-
 export const CardsWrapper = styled.View`
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   padding-left: 20px;
 `;
