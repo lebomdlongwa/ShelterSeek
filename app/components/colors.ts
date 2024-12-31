@@ -1,5 +1,5 @@
 type Colors = {
-  blue: "#0061FF";
+  purple: "#8B5DFF";
   blueFaded: "#0061FF1A";
   blueVeryFaded: "#0061FF0A";
   whitish: "#FBFBFD";
@@ -11,7 +11,7 @@ type Colors = {
 };
 
 export const Colors: Colors = {
-  blue: "#0061FF",
+  purple: "#8B5DFF",
   blueFaded: "#0061FF1A",
   blueVeryFaded: "#0061FF0A",
   whitish: "#FBFBFD",

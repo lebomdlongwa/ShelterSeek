@@ -24,5 +24,5 @@ export const OptionLabel = styled.Text<{ active: boolean }>`
   width: 100%;
   text-align: center;
   margin-top: 3px;
-  color: ${({ active }) => (active ? `${Colors.blue}` : `${Colors.gray}`)};
+  color: ${({ active }) => (active ? `${Colors.purple}` : `${Colors.gray}`)};
 `;
