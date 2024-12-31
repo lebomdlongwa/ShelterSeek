@@ -12,7 +12,7 @@ type TabOptionProps = {
 };
 
 const TabsOption = ({ icon, active, label }: TabOptionProps) => {
-  const iconColor = active ? Colors.blue : Colors.gray;
+  const iconColor = active ? Colors.purple : Colors.gray;
 
   return (
     <styled.TabsOptionWrapper>

@@ -55,7 +55,7 @@ export const LetsGetYouText = styled.Text`
 
 export const IdealHomeText = styled(LetsGetYouText)`
   width: 100%;
-  color: ${Colors.blue};
+  color: ${Colors.purple};
   text-align: center;
 `;
 

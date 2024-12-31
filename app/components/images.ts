@@ -7,6 +7,9 @@ import barChart from "@/assets/images/bar-chart.png";
 import whiteGradient from "@/assets/images/white-gradient.png";
 import map from "@/assets/images/map.png";
 import noResult from "@/assets/images/no-result.png";
+import kitchen_1 from "@/assets/images/kitchen_1.png";
+import kitchen_2 from "@/assets/images/kitchen_2.png";
+import livingRoom from "@/assets/images/livingRoom.png";
 
 export default {
   onboarding,
@@ -18,4 +21,7 @@ export default {
   whiteGradient,
   map,
   noResult,
+  kitchen_1,
+  kitchen_2,
+  livingRoom,
 };
