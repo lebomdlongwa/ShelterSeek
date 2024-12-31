@@ -4,6 +4,7 @@ import icons from "@/app/components/icons";
 import { Colors } from "@/app/components/colors";
 import images from "@/app/components/images";
 import { ImageSourcePropType } from "react-native";
+import { SafeView, VerticalScroll } from "@/app/styles";
 
 const SettingsDefinition = [
   {
@@ -55,8 +56,8 @@ const OptionsComponent = ({ icon, name }: OptionsComponentProps) => (
 
 const Profile = () => {
   return (
-    <styled.SafeAreaView>
-      <styled.ScrollView>
+    <SafeView>
+      <VerticalScroll style={{ paddingLeft: 20, paddingRight: 20 }}>
         <styled.ProfileHeaderWrapper>
           <styled.HeaderText>Profile</styled.HeaderText>
           <styled.BellIcon source={icons.bell} />
@@ -68,7 +69,11 @@ const Profile = () => {
         <styled.SettingsWrapper>
           <styled.TopSettings>
             {SettingsDefinition.slice(0, 2).map((option) => (
-              <OptionsComponent name={option.name} icon={option.icon} />
+              <OptionsComponent
+                key={option.name}
+                name={option.name}
+                icon={option.icon}
+              />
             ))}
           </styled.TopSettings>
           <styled.BottomSettings>
@@ -86,8 +91,8 @@ const Profile = () => {
             </styled.OptionsName>
           </styled.Logout>
         </styled.SettingsWrapper>
-      </styled.ScrollView>
-    </styled.SafeAreaView>
+      </VerticalScroll>
+    </SafeView>
   );
 };
 

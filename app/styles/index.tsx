@@ -1,6 +1,7 @@
 import { Colors } from "@/app/components/colors";
 import { Fonts } from "@/app/components/fonts";
-import { StyleSheet } from "react-native";
+import { ReactNode } from "react";
+import { StyleProp, StyleSheet, ViewStyle } from "react-native";
 import styled from "styled-components/native";
 
 export const shadowStyle = StyleSheet.create({
@@ -13,3 +14,27 @@ export const shadowStyle = StyleSheet.create({
     shadowRadius: 5,
   },
 });
+
+export const SafeView = styled.SafeAreaView`
+  width: 100%;
+  height: 100%;
+  background-color: white;
+`;
+
+export const VerticalScroll = styled.ScrollView``;
+
+const Horizontal = styled.ScrollView``;
+
+type HorizontalScrollProps = {
+  style?: StyleProp<ViewStyle> | undefined;
+  children: ReactNode;
+};
+
+export const HorizontalScroll = ({
+  children,
+  style,
+}: HorizontalScrollProps) => (
+  <Horizontal style={style} horizontal showsHorizontalScrollIndicator={false}>
+    {children}
+  </Horizontal>
+);

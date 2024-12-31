@@ -3,11 +3,12 @@ import images from "./components/images";
 import * as styled from "./styles/sign_in";
 import icons from "./components/icons";
 import { Text } from "react-native";
+import { SafeView, VerticalScroll } from "./styles";
 
 const Sign_in = () => {
   return (
-    <styled.SafeAreaView>
-      <styled.ScrollView>
+    <SafeView>
+      <VerticalScroll>
         <styled.SignInWrapper>
           <styled.SignInBanner source={images.onboarding} />
           <styled.FormWrapper>
@@ -27,8 +28,8 @@ const Sign_in = () => {
             </styled.LoginButton>
           </styled.FormWrapper>
         </styled.SignInWrapper>
-      </styled.ScrollView>
-    </styled.SafeAreaView>
+      </VerticalScroll>
+    </SafeView>
   );
 };
 

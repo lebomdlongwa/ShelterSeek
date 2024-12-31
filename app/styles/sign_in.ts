@@ -2,18 +2,6 @@ import { Fonts } from "@/app/components/fonts";
 import styled from "styled-components/native";
 import { Colors } from "../components/colors";
 
-export const SafeAreaView = styled.View`
-  background-color: white;
-  height: 100%;
-  width: 100%;
-`;
-
-export const ScrollView = styled.View`
-  background-color: white;
-  height: 100%;
-  width: 100%;
-`;
-
 export const SignInWrapper = styled.View`
   background-color: white;
   height: 100%;

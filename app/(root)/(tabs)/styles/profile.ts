@@ -2,17 +2,6 @@ import { Colors } from "@/app/components/colors";
 import { Fonts } from "@/app/components/fonts";
 import styled from "styled-components/native";
 
-export const SafeAreaView = styled.SafeAreaView`
-  width: 100%;
-  height: 100%;
-  background-color: white;
-`;
-export const ScrollView = styled.ScrollView`
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-`;
-
 export const ProfileHeaderWrapper = styled.View`
   width: 100%;
   display: flex;

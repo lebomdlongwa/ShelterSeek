@@ -1,5 +1,6 @@
 import React from "react";
 import * as styled from "./styles";
+import { HorizontalScroll } from "@/app/styles";
 
 const SlideBarOptionsDefinition = [
   {
@@ -26,10 +27,10 @@ const SlideBarOptionsDefinition = [
 
 const SlideBarComponent = () => {
   return (
-    <styled.ScrollView horizontal showsHorizontalScrollIndicator={false}>
+    <HorizontalScroll style={{ paddingLeft: 20 }}>
       <styled.SlideBarWrapper>
         {SlideBarOptionsDefinition.map((option) => (
-          <styled.SlideOptions active={option.active}>
+          <styled.SlideOptions key={option.label} active={option.active}>
             <styled.OptionLabel active={option.active}>
               {option.label}
             </styled.OptionLabel>
@@ -37,7 +38,7 @@ const SlideBarComponent = () => {
         ))}
         <styled.ExtraSpace />
       </styled.SlideBarWrapper>
-    </styled.ScrollView>
+    </HorizontalScroll>
   );
 };
 
